@@ -1,7 +1,5 @@
-### Group Name: 400 Bad Request
-### Group Members: Zhengqian Xu, Hongyang Zheng, Heng Zhou
-
 ### NLP Project2 – Product Search Relevance
+#### Group Name: 400 Bad Request
 
 #### Motivation:
 When a user wants to buy something online, they might not be able to input the exact name for that product, and the company needs to figure out which products are most relevant to the words the user inputs and return a page of products with high relevance. For example, if a user wants to buy some “AA battery”, then the website should return “pack of size AA batteries” or at least “cordless drill battery” if they don’t have AA battery, rather than “snow shovel” which is totally irrelevant. Based on this scenario, our group wants to use some NLP techniques to calculate the relevant score between what a user enters (key words) and what the company has (products), with returning the top 10 most relevant products to the users. 
