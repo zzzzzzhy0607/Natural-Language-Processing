@@ -104,6 +104,8 @@ Our best model is Xgboost with test RMSE = 0.48. Compared with the best RMSE sco
 ### Application
 On the top of our best model, we developed a mini search recommendation application. We first asked the user to input a search term (i.e. Battery) and then we replaced every search term in the original dataset with the new normalized search term (batteri). Next, we recalculated the 12 similarity measures among the new search term, product title and product description to generate the new prediction dataset and finally applied the trained Xgboost model to the new prediction dataset to predict the relevance score. In the end, we return the user with the top 10 relevance products given the search term he/she entered (i.e. ‘Battery’):
 
+![image](https://github.com/zzzzzzhy0607/Natural-Language-Processing/blob/master/Product%20Relevance%20Match/Search.png)
+
 We can see that most of the products are related to `battery`, but there are still some unrelated products. 
 ### References
 [1] Petar R. Petar P., Peter M., Heiko P.: A Machine Learning Approach for Product Matching and Categorization(2016)
