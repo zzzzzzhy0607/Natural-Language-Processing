@@ -79,19 +79,25 @@ After going through basic evaluation, it may lead to a conclusion that it is not
 We randomly selected 70% of our data as training data and the remaining as test data. Then we built  four models to use 12 numerical variables to predict for `relevance`.
 
 Lasso: 
+
 Lasso helps to make an automatic feature selection and we built it as a benchmark. We first tried a range of alpha value and made a trajectory plot of lasso coefficients, showing that `ratio_1` is the last column in the model. Then we used LassoCV to choose the optimal alpha value, which is 1.32*10^-6. Then this value was put into our lasso model and fit the training data. Finally  we got RMSE of test data is 0.487.
 
 Random Forest: 
+
 For this model, we used GridSearchCV to find the best parameters. We set `max_depth` as [5,6,7] and `n_estimators` as [200,400,600] and got the optimal parameters that `max_depth` is 7 and `n_estimators` is 400. It turns out that random forest with best parameters performs better than lasso with test RMSE to be 0.481.
 
 Xgboost:  
+
 For this model, we also used GridSearchCV to find the best parameters. We set `max_depth` as [2,4,6,8] and `n_estimators` as [20,50,100,200] and got the optimal parameters that `max_depth` is 4 and `n_estimators` is 100. It turns out that the result of Xgboost is slightly better than random forest  with test RMSE to be 0.480.
 
 Chain model with pipeline: 
+
 We picked two best models - Random Forest and Xgboost, from the previous three models and built a pipeline to to fit the training data. However, the test RMSE is 0.483, which is higher than both of separating models. 
  
 ### Results & Analysis
 Since we built predictive machine learning models, we used `RMSE` as the evaluation metric. The results are shown in the below table:
+
+![image](https://github.com/zzzzzzhy0607/Natural-Language-Processing/blob/master/Product%20Relevance%20Match/Result.png)
 
 Our best model is Xgboost with test RMSE = 0.48. Compared with the best RMSE score 0.43 in Kaggle competition leaderboard, our result is pretty good since we only trained our model based on a smaller dataset.
  
