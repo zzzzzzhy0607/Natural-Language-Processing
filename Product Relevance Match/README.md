@@ -1,15 +1,5 @@
 # ANLY580 Project
-## Home Depot Product Search Relevance
-## 400 Bad Request -- Hongyang Zheng, Heng Zhou, Zhengqian Xu
- 
-### Segregation of Duties
-`Hongyang Zheng` is mainly responsible for data collection, data cleaning, and feature engineering parts.
-
-`Heng Zhou` is mainly responsible for feature engineering and application parts.
-
-`Zhengqian Xu` is mainly responsible for data exploratory analysis and model building parts.
-
-All of us are engaged in model evaluation, model improvement and results parts， with giving feedback to each other throughout this project.
+## Home Depot Product Search Relevanc
  
 ### Motivation
 When a customer wants to buy something online, he/she might not be able to input the exact name for that product, and the company needs to figure out which products are most relevant to the search words in order to return the high relevant products to that customer. For example, if a customer wants to buy some “AA battery”, then the website should return “pack of size AA batteries” or at least “cordless drill battery” if they don’t have AA battery, rather than “snow shovel” which is totally irrelevant. 
